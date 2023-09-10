@@ -16,7 +16,7 @@ public class RotateAround : MonoBehaviour
         tiemposDeRetraso = new float[transform.childCount];
         for (int i = 0; i < tiemposDeRetraso.Length; i++)
         {
-            tiemposDeRetraso[i] = retrasoInicial + i * 30f; // Aumenta el retraso para cada hijo.
+            tiemposDeRetraso[i] = retrasoInicial + i* 2f; // Aumenta el retraso para cada hijo.
         }
     }
 
@@ -30,7 +30,7 @@ public class RotateAround : MonoBehaviour
 
             if (Time.time >= tiempoDeRetraso)
             {
-                imagen.RotateAround(centroDelCarrusel.position, Vector3.up, velocidadRotacion * Time.deltaTime);
+                imagen.RotateAround(centroDelCarrusel.position, Vector3.down, velocidadRotacion * Time.deltaTime);
             }
         }
     }
