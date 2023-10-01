@@ -8,8 +8,14 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.17.0/Hello Cardboard/Scenes/HelloCardboard.unity
     guid: 145a2a45d7bc746b19cb68410368bf96
-  - enabled: 1
+  - enabled: 0
     path: Assets/Practicas/Practica 3/Practica3.unity
     guid: b2502ed594a99e649a1fbf64a51ca920
+  - enabled: 0
+    path: Assets/Practicas/Practica2.unity
+    guid: 2c63dc8ad23a8e840a3c64001b1b5d7f
+  - enabled: 0
+    path: Assets/Practicas/practica5.unity
+    guid: e013fb95057886843a3a8e44887e859f
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9e47a17b956b408408d153cc58ee8a7b, type: 2}
