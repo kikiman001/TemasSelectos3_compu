@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Practicas/Practica 3/Practica3.unity
     guid: b2502ed594a99e649a1fbf64a51ca920
-  - enabled: 0
+  - enabled: 1
     path: Assets/Practicas/practica4.unity
     guid: 495e68f08f463c442b70b1d4ba6d015b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Practicas/Empty.unity
     guid: 47cb1960a3401044bacfda29289534f0
   m_configObjects:

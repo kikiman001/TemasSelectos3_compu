@@ -15,13 +15,23 @@ public class SceneControl : MonoBehaviour
 
     private void NextScene()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        int nextSceneIndex = SceneManager.GetSceneByName(currentSceneName).buildIndex + 1;
+
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
     }
 
     private void PreviousScene()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex - 1);
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        int previousSceneIndex = SceneManager.GetSceneByName(currentSceneName).buildIndex - 1;
+
+        if (previousSceneIndex >= 0)
+        {
+            SceneManager.LoadScene(previousSceneIndex);
+        }
     }
 }
