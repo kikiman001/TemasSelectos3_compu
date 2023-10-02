@@ -4,34 +4,36 @@ using UnityEngine.SceneManagement;
 
 public class SceneControl : MonoBehaviour
 {
-    public Button nextButton;
-    public Button previousButton;
 
-    private void Start()
+	
+    public void LoadNextScene()
     {
-        nextButton.onClick.AddListener(NextScene);
-        previousButton.onClick.AddListener(PreviousScene);
-    }
-
-    private void NextScene()
-    {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        int nextSceneIndex = SceneManager.GetSceneByName(currentSceneName).buildIndex + 1;
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextSceneIndex);
         }
+        else
+        {
+            // Si estás en la última escena, puedes cargar la primera escena 
+            SceneManager.LoadScene(0); // Esto carga la escena.
+        }
     }
 
-    private void PreviousScene()
+    public void LoadPreviousScene()
     {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        int previousSceneIndex = SceneManager.GetSceneByName(currentSceneName).buildIndex - 1;
+        int previousSceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
 
         if (previousSceneIndex >= 0)
         {
             SceneManager.LoadScene(previousSceneIndex);
+        }
+        else
+        {
+            // Si estás en la primera escena y quieres ir a la última.
+            int lastSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
+            SceneManager.LoadScene(lastSceneIndex);
         }
     }
 }
