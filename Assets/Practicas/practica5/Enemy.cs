@@ -18,7 +18,14 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
         if (userDetect) 
         enemy.destinatiom=user.position;
     }
 }
+=======
+        if (userDetect)
+            enemy.destinatiom = user.position;
+    }
+}
+>>>>>>> Stashed changes
